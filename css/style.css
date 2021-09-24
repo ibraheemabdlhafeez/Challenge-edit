@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+}
+.box {
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: row-reverse;
+    width: min-content;
+    height: 26rem;
+    margin: 10% auto;
+    border-radius: 7px;
+}
+.box .right img {
+    border-radius: 0 7px 7px 0;
+    height: 100%;
+}
+.box .right img:nth-child(2) {
+    display: none;
+}
+@media (max-width: 768px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 90%;
+    }
+    .box .right img {
+        width: 100%;
+        border-radius: 7px 7px 0 0;
+        display: none;
+    }
+    .box .right img:nth-child(2) {
+        display: initial;
+    }
+}
+.box .left {
+    padding: 50px;
+}
+.box .left .text h2 {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.box .left .text h2 span {
+    color: hsl(277, 64%, 61%);
+}
+.box .left .text p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: .8rem;
+    line-height: 1.4rem;
+}
+@media (max-width: 768px) {
+    .box .left .text h2 {
+        font-size: 1.4685rem;
+        margin-bottom: 10px;
+
+    }
+    .box .left .text p {
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.5rem;
+        margin-top: 1px;
+    }
+}
+.box .left .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+    margin-right: 40px;
+}
+.box .left .total .num {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+}
+.box .left .total .tag {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: .8rem;
+}
+@media (max-width: 768px) {
+    .box .left .total {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 5px;
+    }
+    .box .left .total .num {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+}
